@@ -1,9 +1,13 @@
-
+import Navbar from "./Components/Navbar";
+import Title from './Components/Title';
+import TodoList from './Components/TodoList'
 
 function App() {
   return (
     <div className="App">
-     <h1>hello</h1>
+     <TodoList/>
+     <Navbar/>
+     <Title/>
     </div>
   );
 }
