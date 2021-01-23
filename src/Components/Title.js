@@ -1,8 +1,14 @@
 import React from 'react'
 class Title extends React.Component{
   render(){
-    return(<div>TITLE</div>
-
+    return(
+    <div className='title-bar'>
+      <div className='barnding'>
+      <h2>Todo App</h2>  </div>
+      <i className="fas fa-moon"></i>
+        
+     
+    </div>
     )
   }
 }

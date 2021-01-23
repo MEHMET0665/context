@@ -1,7 +1,12 @@
 import React from 'react'
 class Navbar extends React.Component{
   render(){
-    return(<div>NAVBAR</div>
+    return(
+    <ul className='navbar'>
+      <li>Home</li>
+      <li>About</li>
+      <li>Login</li>
+    </ul>
 
     )
   }
