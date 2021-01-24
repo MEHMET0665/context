@@ -9,7 +9,7 @@ class Navbar extends React.Component{
     <ul className='navbar' style={{backgoundColor:theme.nav}}>
       <li>Home</li>
       <li>About</li>
-      <li>Login</li>
+      <li onClick={this.context.log}>Login</li>
     </ul>
 
     )

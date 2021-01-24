@@ -1,13 +1,13 @@
-import Title from './Components/Title';
-import Navbar from './Components/Navbar';
-import TodoList from './Components/TodoList';
+import Titlebar from './components/Titlebar';
+import Navbar from './components/Navbar';
+import TodoList from './components/TodoList';
 import ThemeContextProvider from './contexts/ThemeContext';
 
 function App() {
   return (
     <div className="App">
       <ThemeContextProvider>
-        <Title />
+        <Titlebar />
         <Navbar />
         <TodoList/>
       </ThemeContextProvider>
