@@ -5,23 +5,22 @@ export const ThemeContext = createContext();
 class ThemeContextProvider extends React.Component {
   state = {
     isLightTheme: true,
-    lightTheme: {text: '#000', title: '#9EA7AA', nav: '#CFD8DC', body:'#ECEFF1'},
-    darkTheme: {text: '#FFF', title: '#4f5b62', nav: '#37474f', body:'#263238'},
-    isLoggedIn:false
+    lightTheme: {text: '#000', titleBar: '#9EA7AA', nav: '#CFD8DC', body:'#ECEFF1'},
+    darkTheme: {text: '#cfd8dc', titleBar: '#37474f', nav: '#4f5b62', body:'#263238'},
+  
   }
-switch =()=> {
-  this.setState({
-    isLightTheme:!this.state.isLightTheme
-  })
-}
-log =()=> {
-  this.setState({
-    isLoggedIn:!this.state.isLoggedIn
-  })
-}
+
+  switchTheme = () => {
+    this.setState({
+      isLightTheme: !this.state.isLightTheme
+    })
+  }
+
+  
+
   render() {
     return (
-      <ThemeContext.Provider value={{...this.state,toggle:this.switch,log:this.log}}>
+      <ThemeContext.Provider value={{...this.state, toggleTheme: this.switchTheme, toggleAuth: this.switchAuth}}>
         {this.props.children}
       </ThemeContext.Provider>
     )
