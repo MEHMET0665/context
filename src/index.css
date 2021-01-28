@@ -63,3 +63,8 @@ code {
   /* background-color: #cfd8dc; */
   margin-bottom: 16px;
 }
+
+.todolist li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}

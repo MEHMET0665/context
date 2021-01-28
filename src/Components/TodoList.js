@@ -4,7 +4,7 @@ import {TodoItemsContext} from '../contexts/TodoItemsContext'
 
 function TodoList() {
   const[title,setTitle]=useState('');
-  const {items,addItem}=useContext(TodoItemsContext)
+  const {items,addItem,removeItem}=useContext(TodoItemsContext)
     const {isLightTheme, lightTheme, darkTheme} = useContext(ThemeContext);
     const theme = isLightTheme ? lightTheme : darkTheme;
 
@@ -15,6 +15,9 @@ function TodoList() {
       e.preventDefault();
       addItem(title)
     }
+    // const handleClick=(e)=>{
+    //   removeItem(e.target.id)
+    // }
     return (
       <div className='todolist' style={{backgroundColor: theme.body, color: theme.text}}>
         <form onSubmit={handleSubmit}>
@@ -22,7 +25,7 @@ function TodoList() {
         </form>
         <ul>
           {items.map(item=>{
-            return(<li key={item.id}style={{backgroundColor: theme.nav}}>{item.title}
+            return(<li id={item.id}key={item.id}style={{backgroundColor: theme.nav}} onClick={() => removeItem(item.id)}>{item.title}
               
             </li>)
           })}
