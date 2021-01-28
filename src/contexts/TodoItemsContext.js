@@ -7,7 +7,7 @@ function TodoItemsContextProvider(props){
     {title:'Pay the bills',id:2},
   ])
   return(
-    <TodoItemsContext.Provider value={items}>
+    <TodoItemsContext.Provider value={{items}}>
       {props.children}
     </TodoItemsContext.Provider>
   )
